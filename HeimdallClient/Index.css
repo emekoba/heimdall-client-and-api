@@ -1,0 +1,189 @@
+@font-face {
+	font-family: Sebino;
+	src: url("./Resources/Fonts/Sebino-Bold.ttf");
+}
+
+:root {
+	--theme: #1d212b;
+	--accent: #4a4a58;
+	--theme2: #000428cc;
+	--accent2: rgba(178, 19, 19, 0.83);
+	--theme3: rgba(241, 28, 28, 0.972);
+}
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+input {
+	outline: none;
+	box-sizing: border-box;
+	padding: 5px;
+	padding-left: 10;
+	padding-right: 10;
+	border: none;
+	height: 4vw;
+	font-size: 3vh;
+	width: 60vh;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+div {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+button {
+	border: none;
+	background: none;
+	outline: none;
+	cursor: pointer;
+	transition: 0.3s ease-in-out;
+	/* transition: 0.1s ease-in-out; */
+	background-color: var(--theme);
+	color: white;
+	height: 4vw;
+	width: 9vw;
+	font-weight: bold;
+}
+button:active {
+	transform: scale(1);
+}
+/* button:start {
+	animation: entrance 700ms ease-out;
+} */
+
+body {
+	height: 90vh;
+	background-color: var(--theme);
+	color: whitesmoke;
+	justify-content: center;
+	align-items: center;
+	padding-left: 8vw;
+	padding-right: 8vw;
+	/* padding-top: 8vh; */
+	font-family: "Sebino";
+}
+
+.dock {
+	height: 100%;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 1px;
+}
+
+.left_box {
+	background-color: var(--accent);
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+.logo {
+	display: grid;
+	height: 10vh;
+	width: 20vw;
+	background-color: white;
+	color: var(--accent);
+	font-size: 2vw;
+	place-items: center;
+	border-radius: 5px;
+	border-bottom-left-radius: 0px;
+	border-top-right-radius: 0px;
+}
+
+.rules_text_field {
+	padding: 20px;
+	padding-top: 80px;
+}
+.rules_field_and_button,
+.validate_field_and_button {
+	display: flex;
+}
+.rules_field_and_button > input {
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	text-align: center;
+}
+.rules_field_and_button > button {
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.rules_bucket {
+	background-color: var(--theme);
+	height: 30vh;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	padding-top: 20px;
+	overflow-y: scroll;
+}
+
+.rules_bucket > div {
+	height: 50;
+	background-color: var(--accent);
+	border-radius: 2px;
+	display: grid;
+	place-items: center;
+	cursor: pointer;
+	transition: 0.3s ease-in-out;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+.rule_chip:hover {
+	transform: scale(0.9);
+}
+
+.right_box {
+	background-color: var(--accent);
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	display: grid;
+	grid-template-rows: 1fr, auto;
+}
+
+.form_field_list {
+	/* background-color: steelblue; */
+	max-height: 480px;
+	display: grid;
+	grid-gap: 20px;
+	padding: 50px;
+	padding-bottom: 10px;
+	overflow: scroll;
+}
+
+.form_field_and_descriptor {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.form_field_and_descriptor > div > input {
+	height: 40px;
+	border-radius: 3px;
+	width: 20vh;
+	text-align: center;
+}
+
+.input_and_tick {
+	display: flex;
+	align-items: center;
+}
+
+.tick {
+	height: 10px;
+	width: 10px;
+	border-radius: 5px;
+	background-color: var(--accent);
+	margin-left: 50px;
+	margin-bottom: 5px;
+}
+
+.button_area {
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+}

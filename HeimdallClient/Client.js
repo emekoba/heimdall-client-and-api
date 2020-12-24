@@ -56,7 +56,7 @@ validateButton.addEventListener("click", function validate() {
 				.querySelector("input").value)
 	);
 
-	fetch("http://localhost:3000/validateInput", {
+	fetch("https://heimdallapi.ew.r.appspot.com/validateInput", {
 		method: "post",
 		headers: { "Content-Type": "application/json" },
 		body: JSON.stringify({ form: formFields, rules: activeRules }),
